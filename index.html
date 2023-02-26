@@ -1,0 +1,434 @@
+<html>
+    <head>
+        <title>Exp</title>
+        <script>
+            function timeup(){
+                var date = new Date;
+                var hour = date.getHours();
+                var minutes = date.getMinutes();
+                var seconds = date.getSeconds();
+                if(seconds>9){
+                    document.getElementById("time").innerHTML=hour+":"+minutes+":"+seconds;
+                }else{
+                    document.getElementById("time").innerHTML=hour+":"+minutes+":"+"0"+seconds;
+                }
+            }
+            setInterval(timeup,1000);
+           
+           
+            var i=0;
+
+            function samosa(){
+                i++;
+                alert("samosa added to cart");
+                document.getElementById("samosadisp").style.display="block";
+                document.getElementById("quants").value="1";
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            function breadpakoda(){
+                alert("Bread Pakoda added to cart");
+                document.getElementById("breadpakodadisp").style.display="block";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            function maggi(){
+                alert("Maggie added to cart");
+                document.getElementById("maggiedisp").style.display="block";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+
+            function ppfires(){
+                alert("Peri Peri Fries added to cart");
+                document.getElementById("ppdisp").style.display="block";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+
+            isam=1;
+            function incs(){
+                isam++;
+                document.getElementById("quants").value=isam;
+            }
+            function decs(){
+                isam--;
+                if(isam==0){
+                    document.getElementById("samosadisp").style.display="none";
+                }
+                document.getElementById("quants").value=isam;
+            }
+
+            ibread=1;
+
+            function incbp(){
+                ibread++;
+                document.getElementById("quantbp").value=ibread;
+            }
+            function decbp(){
+                ibread--;
+                if(isam==0){
+                    document.getElementById("breadpakodadisp").style.display="none";
+                }
+                document.getElementById("quantbp").value=ibread;
+            }
+
+            imag=1;
+
+            function incbp(){
+                imag++;
+                document.getElementById("quantmag").value=imag;
+            }
+            function decbp(){
+                imag--;
+                if(isam==0){
+                    document.getElementById("maggiedisp").style.display="none";
+                }
+                document.getElementById("quantmag").value=imag;
+            }
+        </script>
+        <style>
+            body{
+                margin: 0px;
+                color: white;
+            }
+            .container1{
+                height: 135px;
+                flex-direction: column;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            .navigation{
+                position: fixed;
+                padding-left: 46px;
+                padding-right: 46px;
+                display: flex;
+                gap: 50px;
+                padding-top: 0px;
+                background-color: #131921;
+                justify-content: center;
+                align-items: center;
+            }
+            .options{
+                position: fixed;
+                top: 100px;
+                background-color: #2182b0;
+                display: flex;
+                padding: 8px;
+                padding-left: 340px;
+                padding-right: 340px;
+                gap: 50px;
+                justify-content: center;
+            }
+            .container2{
+                display: flex;
+                color: black;
+            }
+            .cartdisp{
+                margin-left: 1250px;
+                position: fixed;
+                border: 2px solid black;
+                width: 265px;
+            }
+            .main{
+                width: 1250px;
+                border: 1px solid black;
+                color: black;
+            }
+            .fast_food{
+                display: grid;
+                margin-left: 15px;
+                grid-template-columns: auto auto auto;
+                row-gap: 50px;
+                column-gap: 50px;
+            }
+            .noodles{
+                display: grid;
+                margin-left: 15px;
+                grid-template-columns: auto auto auto;
+                row-gap: 50px;
+                column-gap: 50px;
+            }
+            .shakes{
+                display: grid;
+                margin-left: 15px;
+                grid-template-columns: auto auto auto;
+                row-gap: 50px;
+                column-gap: 50px;
+            }
+            .dessert{
+                display: grid;
+                margin-left: 15px;
+                grid-template-columns: auto auto auto;
+                row-gap: 50px;
+                column-gap: 50px;
+            }
+            .beverages{
+                display: grid;
+                margin-left: 15px;
+                grid-template-columns: auto auto auto;
+                row-gap: 50px;
+                column-gap: 50px;
+            }
+            .snacks{
+                display: grid;
+                margin-left: 15px;
+                grid-template-columns: auto auto auto;
+                row-gap: 50px;
+                column-gap: 50px;
+            }
+            .stationary{
+                display: grid;
+                margin-left: 15px;
+                grid-template-columns: auto auto auto;
+                row-gap: 50px;
+                column-gap: 50px;
+            }
+            .dailyessentials{
+                display: grid;
+                margin-left: 15px;
+                grid-template-columns: auto auto auto;
+                row-gap: 50px;
+                column-gap: 50px;
+            }
+            center{
+                font-size: 25px;
+            }
+            p{
+                font-size: 20px;
+            }
+            .item{
+                height: 180px;
+                width: 280px;
+            }
+            .itemn{
+                text-align: center;
+                margin-left: -100px;
+            }
+            .quant{
+                width: 20px;
+            }
+            .samosad{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .breadpakodad{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .maggied{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .ppd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <div class="container1">
+            <div class="navigation">
+                <div class="milmaimg"><a href="milmaclick.html" target="main"><img src="milma_logo.png" height="40px"></a></div>
+                <div class="hostel">
+                    <select>
+                    <option selected>Select your Hostel</option>l
+                    <option>Anamudi</option>
+                    <option>Meenachil</option>
+                    <option>Manimala</option>
+                    <option>Shayadri</option>
+                    </select>
+                </div>
+                <div class="search">
+                    <input type="text"  name="q" placeholder="Search..." size="50">
+                    <button>Search</button>
+                </div>
+                <div class="lands"><a href="login_signup.html">login or signup</a></div>
+                <div class="cart"><img id="cart" src="cart/cart_0.png"  height="40px"></div>
+                <div class="user"><img src="user.png" height="40px"></div>
+                <div class="uid">User Id</div>
+                <div class="time"><p id="time" onload="timeup()"></p></div>
+                <div class="kottayam"><img src="iiit_kottayam-removebg-preview.png" height="100px"></div>
+            </div>
+            <div class="options">
+                    <div class="li1" onclick="fast_food()">Fast Food</div>      
+                    <div class="li2" onclick="noodles()">Noodles</div>
+                    <div class="li3" onclick="shakes()">Shakes</div>
+                    <div class="li4" onclick="dessert()">Dessert</div>
+                    <div class="li5" onclick="beverages()">Beverages</div>
+                    <div class="li6" onclick="snacks()">Snacks</div>
+                    <div class="li7" onclick="stationary()">Stationary</div>
+                    <div class="li8" onclick="displaydailyessentials()">Daily essentials</div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="main">
+                <div class="fast_food" id="fast_food">
+                    <div class="fast_foodi"><p class="itemn">Samosa</p><img class="item" src="fast_food/samosa.jpg"><p class="itemn">₹15/-</p><img src="add_to_cart.png" onclick="samosa()"></p></div>
+                    <div class="fast_foodi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">₹20/-</p><img src="add_to_cart.png"  onclick="breadpakoda()"></p></div>
+                    <div class="fast_foodi"><p class="itemn">Maggie</p><img class="item" src="fast_food/maggi.jpg"><p class="itemn">₹25/-</p><img src="add_to_cart.png"  onclick="maggi()"></p></div>
+                    <div class="fast_foodi"><p class="itemn">Peri Peri Fries</p><img class="item" src="fast_food/perriperrifries.JPG"><p class="itemn">₹80/-</p><img src="add_to_cart.png"  onclick="ppfries()"></p></div>
+                    <div class="fast_foodi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="fast_foodi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                </div>
+                <div class="noodles" id="noodles">
+                    <div class="noodlesi"><p class="itemn">Samosa</p><img class="item" src="fast_food/samosa.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
+                    <div class="noodlesi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="noodlesi"><p class="itemn">maggie</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="noodlesi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="noodlesi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="noodlesi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                </div>
+                <div class="Shakes" id="shakes">
+                    <div class="Shakesi"><p class="itemn">Belgium Chocolate</p><img class="item" src="shakes/belgium_choco.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
+                    <div class="Shakesi"><p class="itemn">Ferrero Rocher</p><img class="item" src="shakes/frocher.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="Shakesi"><p class="itemn">Oreo Milk shake</p><img class="item" src="shakes/oreoshake.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="Shakesi"><p class="itemn">Belgium Chips</p><img class="item" src="shakes/bchipshake.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="Shakesi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="shakes/kitkatshake.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="Shakesi"><p class="itemn">Vanilla Shake</p><img class="item" src="shakes/vanilla.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                </div>
+                <div class="Beverages" id="beverages">
+                    <div class="Beveragesi"><p class="itemn">Fresh Lime</p><img class="item" src="beverages/freshlimme.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
+                    <div class="Beveragesi"><p class="itemn">Soda Lime</p><img class="item" src="beverages/sodalime.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="Beveragesi"><p class="itemn">Mint Lime</p><img class="item" src="beverages/mintlime.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="Beveragesi"><p class="itemn">Pineapple Juice</p><img class="item" src="beverages/pineapple.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="Beveragesi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="beverages/strawberry_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="Beveragesi"><p class="itemn">Banana Lassi</p><img class="item" src="beverages/banana_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                </div>
+                <div class="stationary" id="stationary">
+                    <div class="stationaryi"><p class="itemn">Calculator</p><img class="item" src="stationary/calci.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Geometry Box</p><img class="item" src="stationary/geo_box.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Notebook</p><img class="item" src="stationary/notebook.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Pineapple Juice</p><img class="item" src="beverages/pineapple.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="beverages/strawberry_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Banana Lassi</p><img class="item" src="beverages/banana_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                </div>
+                <div class="dessert" id="dessert">
+                    <div class="stationaryi"><p class="itemn">Calculator</p><img class="item" src="stationary/calci.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Geometry Box</p><img class="item" src="stationary/geo_box.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Notebook</p><img class="item" src="stationary/notebook.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Pineapple Juice</p><img class="item" src="beverages/pineapple.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="beverages/strawberry_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Banana Lassi</p><img class="item" src="beverages/banana_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                </div>
+                <div class="snacks" id="snacks">
+                    <div class="stationaryi"><p class="itemn">Calculator</p><img class="item" src="stationary/calci.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Geometry Box</p><img class="item" src="stationary/geo_box.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Notebook</p><img class="item" src="stationary/notebook.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Pineapple Juice</p><img class="item" src="beverages/pineapple.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="beverages/strawberry_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                    <div class="stationaryi"><p class="itemn">Banana Lassi</p><img class="item" src="beverages/banana_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                </div>
+            </div>
+            <div class="cartdisp">
+                <p>Cart Items</p>
+                <div class="samosad" id="samosadisp">
+                    <div class="centerd">
+                        <p>Samosa(₹15) <button onclick="decs()">-</button><input type="text" id="quants" class="quant"><button onclick="incs()">+</button></p>
+                    </div>
+                </div>
+                <div class="breadpakodad" id="breadpakodadisp">
+                    <div class="centerd">
+                        <p>Bread pakoda(₹20) <button onclick="decbp()">-</button><input type="text" id="quantbp" class="quant"><button onclick="incbp()">+</button></p>
+                    </div>
+                </div>
+                <div class="maggied" id="maggiedisp">
+                    <div class="centerd">
+                        <p>Maggie(₹25) <button onclick="decmg()">-</button><input type="text" id="quantmag" class="quant"><button onclick="incbp()">+</button></p>
+                    </div>
+                </div>
+                <div class="ppd" id="ppdisp">
+                    <div class="centerd">
+                        <p>Peri Peri Fries(₹25) <button onclick="decpp()">-</button><input type="text" id="quants" class="quant"><button onclick="incpp()">+</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
