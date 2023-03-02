@@ -7,7 +7,13 @@
                 var hour = date.getHours();
                 var minutes = date.getMinutes();
                 var seconds = date.getSeconds();
-                if(seconds>9){
+                if(minutes<10){
+                    document.getElementById("time").innerHTML=hour+":"+"0"+minutes+":"+seconds;
+                    if(minutes<10 && seconds<10){
+                    document.getElementById("time").innerHTML=hour+":"+"0"+minutes+":"+"0"+seconds;
+                     }
+                }
+                else if(seconds>9){
                     document.getElementById("time").innerHTML=hour+":"+minutes+":"+seconds;
                 }else{
                     document.getElementById("time").innerHTML=hour+":"+minutes+":"+"0"+seconds;
@@ -43,6 +49,20 @@
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
             }
+
+            isam=1;
+            function incs(){
+                isam++;
+                document.getElementById("quants").value=isam;
+            }
+            function decs(){
+                isam--;
+                if(isam==0){
+                    document.getElementById("samosadisp").style.display="none";
+                }
+                document.getElementById("quants").value=isam;
+            }
+
             function breadpakoda(){
                 alert("Bread Pakoda added to cart");
                 document.getElementById("breadpakodadisp").style.display="block";
@@ -70,70 +90,6 @@
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
             }
-            function maggi(){
-                alert("Maggie added to cart");
-                document.getElementById("maggiedisp").style.display="block";
-
-                i++;
-                if(i==1){
-                    document.getElementById("cart").src="cart/cart_1.png";
-                }else if(i==2){
-                    document.getElementById("cart").src="cart/cart_2.png";
-                }else if(i==3){
-                    document.getElementById("cart").src="cart/cart_3.png";
-                }else if(i==4){
-                    document.getElementById("cart").src="cart/cart_4.png";
-                }else if(i==5){
-                    document.getElementById("cart").src="cart/cart_5.png";
-                }else if(i==6){
-                    document.getElementById("cart").src="cart/cart_6.png";
-                }else if(i==7){
-                    document.getElementById("cart").src="cart/cart_7.png";
-                }else if(i==8){
-                    document.getElementById("cart").src="cart/cart_8.png";
-                }else if(i==9){
-                    document.getElementById("cart").src="cart/cart_9.png";
-                }
-            }
-
-            function ppfires(){
-                alert("Peri Peri Fries added to cart");
-                document.getElementById("ppdisp").style.display="block";
-
-                i++;
-                if(i==1){
-                    document.getElementById("cart").src="cart/cart_1.png";
-                }else if(i==2){
-                    document.getElementById("cart").src="cart/cart_2.png";
-                }else if(i==3){
-                    document.getElementById("cart").src="cart/cart_3.png";
-                }else if(i==4){
-                    document.getElementById("cart").src="cart/cart_4.png";
-                }else if(i==5){
-                    document.getElementById("cart").src="cart/cart_5.png";
-                }else if(i==6){
-                    document.getElementById("cart").src="cart/cart_6.png";
-                }else if(i==7){
-                    document.getElementById("cart").src="cart/cart_7.png";
-                }else if(i==8){
-                    document.getElementById("cart").src="cart/cart_8.png";
-                }else if(i==9){
-                    document.getElementById("cart").src="cart/cart_9.png";
-                }
-            }
-
-            isam=1;
-            function incs(){
-                isam++;
-                document.getElementById("quants").value=isam;
-            }
-            function decs(){
-                isam--;
-                if(isam==0){
-                    document.getElementById("samosadisp").style.display="none";
-                }
-                document.getElementById("quants").value=isam;
-            }
 
             ibread=1;
 
@@ -143,24 +99,652 @@
             }
             function decbp(){
                 ibread--;
-                if(isam==0){
+                if(ibread==0){
                     document.getElementById("breadpakodadisp").style.display="none";
                 }
                 document.getElementById("quantbp").value=ibread;
             }
 
+
+            function maggi(){
+                alert("Maggie added to cart");
+                document.getElementById("maggiedisp").style.display="block";
+                document.getElementById("quantmag").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+
             imag=1;
 
-            function incbp(){
+            function incmag(){
                 imag++;
                 document.getElementById("quantmag").value=imag;
             }
-            function decbp(){
+            function decmag(){
                 imag--;
-                if(isam==0){
+                if(imag==0){
                     document.getElementById("maggiedisp").style.display="none";
                 }
                 document.getElementById("quantmag").value=imag;
+            }
+
+
+            function ppfries(){
+                alert("Peri Peri Fries added to cart");
+                document.getElementById("ppdisp").style.display="block";
+                document.getElementById("quantpp").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+
+
+            ipp=1;
+
+            function incpp(){
+                ipp++;
+                document.getElementById("quantpp").value=ipp;
+            }
+            function decpp(){
+                ipp--;
+                if(ipp==0){
+                    document.getElementById("ppdisp").style.display="none";
+                }
+                document.getElementById("quantpp").value=ipp;
+            }
+
+
+            function ffries(){
+                alert("French Fries added to cart");
+                document.getElementById("ffdisp").style.display="block";
+                document.getElementById("quantff").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            iff=1;
+            function incff(){
+                iff++;
+                document.getElementById("quantff").value=iff;
+            }
+            function decff(){
+                iff--;
+                if(iff==0){
+                    document.getElementById("ffdisp").style.display="none";
+                }
+                document.getElementById("quantff").value=iff;
+            }
+
+
+            function breadomlette(){
+                alert("Bread Omlette added to cart");
+                document.getElementById("bodisp").style.display="block";
+                document.getElementById("quantbo").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            ibo=1;
+            function incbo(){
+                ibo++;
+                document.getElementById("quantbo").value=ibo;
+            }
+            function decbo(){
+                ibo--;
+                if(ibo==0){
+                    document.getElementById("bodisp").style.display="none";
+                }
+                document.getElementById("quantbo").value=ibo;
+            }
+
+            function belgchoco(){
+                alert("Belgian Chocolate added to cart");
+                document.getElementById("belgdisp").style.display="block";
+                document.getElementById("quantbelg").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            ibelg=1;
+            function incbelg(){
+                ibelg++;
+                document.getElementById("quantbelg").value=ibelg;
+            }
+            function decbelg(){
+                ibelg--;
+                if(ibelg==0){
+                    document.getElementById("belgdisp").style.display="none";
+                }
+                document.getElementById("quantbelg").value=ibelg;
+            }
+
+
+            function ferrocher(){
+                alert("Ferrero Rocher added to cart");
+                document.getElementById("ferdisp").style.display="block";
+                document.getElementById("quantfer").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            ifer=1;
+            function incfer(){
+                ifer++;
+                document.getElementById("quantfer").value=ifer;
+            }
+            function decfer(){
+                ifer--;
+                if(ifer==0){
+                    document.getElementById("ferdisp").style.display="none";
+                }
+                document.getElementById("quantfer").value=ifer;
+            }
+            
+
+            function oreomilk(){
+                alert("Oreo Milkshake added to cart");
+                document.getElementById("omdisp").style.display="block";
+                document.getElementById("quantom").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            iom=1;
+            function incom(){
+                iom++;
+                document.getElementById("quantom").value=iom;
+            }
+            function decom(){
+                iom--;
+                if(iom==0){
+                    document.getElementById("omdisp").style.display="none";
+                }
+                document.getElementById("quantom").value=iom;
+            }
+
+            function bchips(){
+                alert("Belgium chips added to cart");
+                document.getElementById("belgchipdisp").style.display="block";
+                document.getElementById("quantbelgchip").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            ibelgchip=1;
+            function incbelgchip(){
+                ibelgchip++;
+                document.getElementById("quantbelgchip").value=ibelgchip;
+            }
+            function decbelgchip(){
+                ibelgchip--;
+                if(ibelgchip==0){
+                    document.getElementById("belgchipdisp").style.display="none";
+                }
+                document.getElementById("quantbelgchip").value=ibelgchip;
+            }
+
+
+            function kitkatm(){
+                alert("KitKat Milkshake added to cart");
+                document.getElementById("kitkatdisp").style.display="block";
+                document.getElementById("quantkitkat").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            ikitkat=1;
+            function inckitkat(){
+                ikitkat++;
+                document.getElementById("quantkitkat").value=ikitkat;
+            }
+            function deckitkat(){
+                ikitkat--;
+                if(ikitkat==0){
+                    document.getElementById("kitkatdisp").style.display="none";
+                }
+                document.getElementById("quantkitkat").value=ikitkat;
+            }
+
+
+            function vanilla(){
+                alert("Vanilla Milkshake added to cart");
+                document.getElementById("vandisp").style.display="block";
+                document.getElementById("quantvan").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            ivan=1;
+            function incvan(){
+                ivan++;
+                document.getElementById("quantvan").value=ivan;
+            }
+            function decvan(){
+                ivan--;
+                if(ivan==0){
+                    document.getElementById("vandisp").style.display="none";
+                }
+                document.getElementById("quantvan").value=ivan;
+            }
+
+
+            function freshlime(){
+                alert("Fresh Lime added to cart");
+                document.getElementById("freshlimedisp").style.display="block";
+                document.getElementById("quantfreshlime").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            ifreshlime=1;
+            function incfreshlime(){
+                ifreshlime++;
+                document.getElementById("quantfreshlime").value=ifreshlime;
+            }
+            function decfreshlime(){
+                ifreshlime--;
+                if(ifreshlime==0){
+                    document.getElementById("freshlimedisp").style.display="none";
+                }
+                document.getElementById("quantfreshlime").value=ifreshlime;
+            }
+            
+
+            function sodalime(){
+                alert("Soda Lime added to cart");
+                document.getElementById("sodalimedisp").style.display="block";
+                document.getElementById("quantsodalime").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            isodalime=1;
+            function incsodalime(){
+                isodalime++;
+                document.getElementById("quantsodalime").value=isodalime;
+            }
+            function decsodalime(){
+                isodalime--;
+                if(isodalime==0){
+                    document.getElementById("sodalimedisp").style.display="none";
+                }
+                document.getElementById("quantsodalime").value=isodalime;
+            }
+
+
+            function mintlime(){
+                alert("Mint Lime added to cart");
+                document.getElementById("mintlimedisp").style.display="block";
+                document.getElementById("quantmintlime").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            imintlime=1;
+            function incmintlime(){
+                imintlime++;
+                document.getElementById("quantmintlime").value=imintlime;
+            }
+            function decmintlime(){
+                imintlime--;
+                if(imintlime==0){
+                    document.getElementById("mintlimedisp").style.display="none";
+                }
+                document.getElementById("quantmintlime").value=imintlime;
+            }
+
+            function pinejuice(){
+                alert("Pineapple Juice added to cart");
+                document.getElementById("pineapplejdisp").style.display="block";
+                document.getElementById("quantpineapplej").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            ipineapplej=1;
+            function incpineapplej(){
+                ipineapplej++;
+                document.getElementById("quantpineapplej").value=ipineapplej;
+            }
+            function decpineapplej(){
+                ipineapplej--;
+                if(ipineapplej==0){
+                    document.getElementById("pineapplejdisp").style.display="none";
+                }
+                document.getElementById("quantpineapplej").value=ipineapplej;
+            }
+
+
+            function sweetlassi(){
+                alert("Sweet Lassi added to cart");
+                document.getElementById("sweetlassidisp").style.display="block";
+                document.getElementById("quantsweetlassi").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            isweetlassi=1;
+            function incsweetlassi(){
+                isweetlassi++;
+                document.getElementById("quantsweetlassi").value=isweetlassi;
+            }
+            function decsweetlassi(){
+                isweetlassi--;
+                if(isweetlassi==0){
+                    document.getElementById("sweetlassidisp").style.display="none";
+                }
+                document.getElementById("quantsweetlassi").value=isweetlassi;
+            }
+
+
+            function mangolassi(){
+                alert("Mango Lassi added to cart");
+                document.getElementById("mangodisp").style.display="block";
+                document.getElementById("quantmango").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+            }
+            imango=1;
+            function incmango(){
+                imango++;
+                document.getElementById("quantmango").value=imango;
+            }
+            function decmango(){
+                imango--;
+                if(imango==0){
+                    document.getElementById("mangodisp").style.display="none";
+                }
+                document.getElementById("quantmango").value=imango;
             }
         </script>
         <style>
@@ -178,9 +762,9 @@
             }
             .navigation{
                 position: fixed;
-                padding-left: 46px;
-                padding-right: 46px;
                 display: flex;
+                padding-left: 15.8px;
+                padding-right: 15.8px;
                 gap: 50px;
                 padding-top: 0px;
                 background-color: #131921;
@@ -304,14 +888,105 @@
                 justify-content: center;
                 display: none;
             }
+            .ffd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .breadomd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
             .ppd{
                 display: flex;
                 border: 2px solid black;
                 justify-content: center;
                 display: none;
             }
-            
-            
+            .breadd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .belgd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .ferd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .omd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .belgchipd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .kitkatd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .vand{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .freshlimed{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .sodalimed{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .mintlimed{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .pineapplejd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .sweetlassid{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .mangod{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .quant{
+                text-align: center;
+            }
         </style>
     </head>
     <body>
@@ -339,11 +1014,11 @@
                 <div class="kottayam"><img src="iiit_kottayam-removebg-preview.png" height="100px"></div>
             </div>
             <div class="options">
-                    <div class="li1" onclick="fast_food()">Fast Food</div>      
-                    <div class="li2" onclick="noodles()">Noodles</div>
-                    <div class="li3" onclick="shakes()">Shakes</div>
+                    <a href="#fastfood"><div class="li1">Fast Food</div></a>      
+                    <a href="#shakes123"><div class="li2" onclick="noodles()">Noodles</div></a>
+                    <a href="#shakes123"><div class="li3" onclick="shakes()">Shakes</div></a>
                     <div class="li4" onclick="dessert()">Dessert</div>
-                    <div class="li5" onclick="beverages()">Beverages</div>
+                    <a href="#beverages123"><div class="li5" onclick="beverages()">Beverages</div></a>
                     <div class="li6" onclick="snacks()">Snacks</div>
                     <div class="li7" onclick="stationary()">Stationary</div>
                     <div class="li8" onclick="displaydailyessentials()">Daily essentials</div>
@@ -351,61 +1026,35 @@
         </div>
         <div class="container2">
             <div class="main">
-                <div class="fast_food" id="fast_food">
-                    <div class="fast_foodi"><p class="itemn">Samosa</p><img class="item" src="fast_food/samosa.jpg"><p class="itemn">₹15/-</p><img src="add_to_cart.png" onclick="samosa()"></p></div>
-                    <div class="fast_foodi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">₹20/-</p><img src="add_to_cart.png"  onclick="breadpakoda()"></p></div>
-                    <div class="fast_foodi"><p class="itemn">Maggie</p><img class="item" src="fast_food/maggi.jpg"><p class="itemn">₹25/-</p><img src="add_to_cart.png"  onclick="maggi()"></p></div>
-                    <div class="fast_foodi"><p class="itemn">Peri Peri Fries</p><img class="item" src="fast_food/perriperrifries.JPG"><p class="itemn">₹80/-</p><img src="add_to_cart.png"  onclick="ppfries()"></p></div>
-                    <div class="fast_foodi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="fast_foodi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                <div id="fastfood">
+                    <div class="fast_food" id="fast_food">
+                        <div class="fast_foodi"><p class="itemn">Samosa</p><img class="item" src="fast_food/samosa.jpg"><p class="itemn">₹15/-</p><img src="add_to_cart.png" onclick="samosa()"></p></div>
+                        <div class="fast_foodi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">₹20/-</p><img src="add_to_cart.png"  onclick="breadpakoda()"></p></div>
+                        <div class="fast_foodi"><p class="itemn">Maggie</p><img class="item" src="fast_food/maggi.jpg"><p class="itemn">₹25/-</p><img src="add_to_cart.png"  onclick="maggi()"></p></div>
+                        <div class="fast_foodi"><p class="itemn">Peri Peri Fries</p><img class="item" src="fast_food/perriperrifries.JPG"><p class="itemn">₹80/-</p><img src="add_to_cart.png"  onclick="ppfries()"></p></div>
+                        <div class="fast_foodi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/ff.jpg"><p class="itemn">₹90/-</p><img src="add_to_cart.png"  onclick="ffries()"></p></div>
+                        <div class="fast_foodi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_omelette.JPG"><p class="itemn">₹40/-</p><img src="add_to_cart.png"  onclick="breadomlette()"></p></div>
+                    </div>
                 </div>
-                <div class="noodles" id="noodles">
-                    <div class="noodlesi"><p class="itemn">Samosa</p><img class="item" src="fast_food/samosa.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
-                    <div class="noodlesi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="noodlesi"><p class="itemn">maggie</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="noodlesi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="noodlesi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="noodlesi"><p class="itemn">Bread Pakoda</p><img class="item" src="fast_food/bread_pakoda.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                <div class="shakes123" id="shakes123">
+                    <div class="Shakes" id="shakes">
+                        <div class="Shakesi"><p class="itemn">Belgium Chocolate</p><img class="item" src="shakes/belgium_choco.jpg"><p class="itemn">₹70/-</p><img src="add_to_cart.png" onclick="belgchoco()"></p></div>
+                        <div class="Shakesi"><p class="itemn">Ferrero Rocher</p><img class="item" src="shakes/frocher.jpg"><p class="itemn">₹70/-</p><img src="add_to_cart.png"  onclick="ferrocher()"></p></div>
+                        <div class="Shakesi"><p class="itemn">Oreo Milk shake</p><img class="item" src="shakes/oreoshake.jpg"><p class="itemn">₹70</p><img src="add_to_cart.png"  onclick="oreomilk()"></p></div>
+                        <div class="Shakesi"><p class="itemn">Belgium Chips</p><img class="item" src="shakes/bchipshake.jpg"><p class="itemn">₹80/-</p><img src="add_to_cart.png"  onclick="bchips()"></p></div>
+                        <div class="Shakesi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="shakes/kitkatshake.jpg"><p class="itemn">₹80/-</p><img src="add_to_cart.png"  onclick="kitkatm()"></p></div>
+                        <div class="Shakesi"><p class="itemn">Vanilla Shake</p><img class="item" src="shakes/vanilla.jpg"><p class="itemn">₹70/-</p><img src="add_to_cart.png"  onclick="vanilla()"></p></div>
+                    </div>
                 </div>
-                <div class="Shakes" id="shakes">
-                    <div class="Shakesi"><p class="itemn">Belgium Chocolate</p><img class="item" src="shakes/belgium_choco.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
-                    <div class="Shakesi"><p class="itemn">Ferrero Rocher</p><img class="item" src="shakes/frocher.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="Shakesi"><p class="itemn">Oreo Milk shake</p><img class="item" src="shakes/oreoshake.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="Shakesi"><p class="itemn">Belgium Chips</p><img class="item" src="shakes/bchipshake.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="Shakesi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="shakes/kitkatshake.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="Shakesi"><p class="itemn">Vanilla Shake</p><img class="item" src="shakes/vanilla.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                </div>
-                <div class="Beverages" id="beverages">
-                    <div class="Beveragesi"><p class="itemn">Fresh Lime</p><img class="item" src="beverages/freshlimme.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
-                    <div class="Beveragesi"><p class="itemn">Soda Lime</p><img class="item" src="beverages/sodalime.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="Beveragesi"><p class="itemn">Mint Lime</p><img class="item" src="beverages/mintlime.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="Beveragesi"><p class="itemn">Pineapple Juice</p><img class="item" src="beverages/pineapple.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="Beveragesi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="beverages/strawberry_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="Beveragesi"><p class="itemn">Banana Lassi</p><img class="item" src="beverages/banana_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                </div>
-                <div class="stationary" id="stationary">
-                    <div class="stationaryi"><p class="itemn">Calculator</p><img class="item" src="stationary/calci.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Geometry Box</p><img class="item" src="stationary/geo_box.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Notebook</p><img class="item" src="stationary/notebook.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Pineapple Juice</p><img class="item" src="beverages/pineapple.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="beverages/strawberry_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Banana Lassi</p><img class="item" src="beverages/banana_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                </div>
-                <div class="dessert" id="dessert">
-                    <div class="stationaryi"><p class="itemn">Calculator</p><img class="item" src="stationary/calci.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Geometry Box</p><img class="item" src="stationary/geo_box.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Notebook</p><img class="item" src="stationary/notebook.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Pineapple Juice</p><img class="item" src="beverages/pineapple.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="beverages/strawberry_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Banana Lassi</p><img class="item" src="beverages/banana_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                </div>
-                <div class="snacks" id="snacks">
-                    <div class="stationaryi"><p class="itemn">Calculator</p><img class="item" src="stationary/calci.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png" onclick="samosa()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Geometry Box</p><img class="item" src="stationary/geo_box.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Notebook</p><img class="item" src="stationary/notebook.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Pineapple Juice</p><img class="item" src="beverages/pineapple.jpg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Kitkat Milk Shake</p><img class="item" src="beverages/strawberry_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
-                    <div class="stationaryi"><p class="itemn">Banana Lassi</p><img class="item" src="beverages/banana_lassi.jpeg"><p class="itemn">15/-</p><img src="add_to_cart.png"  onclick="breadpakoda()" onclick="cartupdate()"></p></div>
+                <div class="beverages123" id="beverages123">
+                    <div class="beverages" id="beverages">
+                        <div class="beveragesi"><p class="itemn">Fresh Lime</p><img class="item" src="beverages/freshlimme.jpg"><p class="itemn">₹20/-</p><img src="add_to_cart.png" onclick="freshlime()"></p></div>
+                        <div class="beveragesi"><p class="itemn">Soda Lime</p><img class="item" src="beverages/sodalime.jpg"><p class="itemn">₹30/-</p><img src="add_to_cart.png"  onclick="sodalime()"></p></div>
+                        <div class="beveragesi"><p class="itemn">Mint Lime</p><img class="item" src="beverages/mintlime.jpg"><p class="itemn">₹35</p><img src="add_to_cart.png"  onclick="mintlime()"></p></div>
+                        <div class="beveragesi"><p class="itemn">Pineapple Juice</p><img class="item" src="beverages/pineapple.jpg"><p class="itemn">₹60/-</p><img src="add_to_cart.png"  onclick="pinejuice()"></p></div>
+                        <div class="beveragesi"><p class="itemn">Sweet Lassi</p><img class="item" src="beverages/sweetlassi.jpg"><p class="itemn">₹30/-</p><img src="add_to_cart.png"  onclick="sweetlassi()"></p></div>
+                        <div class="beveragesi"><p class="itemn">Mango Lassi</p><img class="item" src="beverages/mangolassi2.webp"><p class="itemn">₹40/-</p><img src="add_to_cart.png"  onclick="mangolassi()"></p></div>
+                    </div>
                 </div>
             </div>
             <div class="cartdisp">
@@ -422,12 +1071,82 @@
                 </div>
                 <div class="maggied" id="maggiedisp">
                     <div class="centerd">
-                        <p>Maggie(₹25) <button onclick="decmg()">-</button><input type="text" id="quantmag" class="quant"><button onclick="incbp()">+</button></p>
+                        <p>Maggie(₹25) <button onclick="decmag()">-</button><input type="text" id="quantmag" class="quant"><button onclick="incmag()">+</button></p>
                     </div>
                 </div>
                 <div class="ppd" id="ppdisp">
                     <div class="centerd">
-                        <p>Peri Peri Fries(₹25) <button onclick="decpp()">-</button><input type="text" id="quants" class="quant"><button onclick="incpp()">+</button></p>
+                        <p>Peri Peri Fries(₹80) <button onclick="decpp()">-</button><input type="text" id="quantpp" class="quant"><button onclick="incpp()">+</button></p>
+                    </div>
+                </div>
+                <div class="ffd" id="ffdisp">
+                    <div class="centerd">
+                        <p>French fries(₹90) <button onclick="decff()">-</button><input type="text" id="quantff" class="quant"><button onclick="incff()">+</button></p>
+                    </div>
+                </div>
+                <div class="breadomd" id="bodisp">
+                    <div class="centerd">
+                        <p>Bread Omlette(₹40) <button onclick="decbo()">-</button><input type="text" id="quantbo" class="quant"><button onclick="incbo()">+</button></p>
+                    </div>
+                </div>
+                <div class="belgd" id="belgdisp">
+                    <div class="centerd">
+                        <p>Belgian Chocolate(₹70) <button onclick="decbelg()">-</button><input type="text" id="quantbelg" class="quant"><button onclick="incbelg()">+</button></p>
+                    </div>
+                </div>
+                <div class="ferd" id="ferdisp">
+                    <div class="centerd">
+                        <p>Ferrero Rocher(₹70) <button onclick="decfer()">-</button><input type="text" id="quantfer" class="quant"><button onclick="incfer()">+</button></p>
+                    </div>
+                </div>
+                <div class="omd" id="omdisp">
+                    <div class="centerd">
+                        <p>Oreo Milkshake(₹70) <button onclick="decom()">-</button><input type="text" id="quantom" class="quant"><button onclick="incom()">+</button></p>
+                    </div>
+                </div>
+                <div class="belgchipd" id="belgchipdisp">
+                    <div class="centerd">
+                        <p>Belgium Chips(₹80) <button onclick="decbelgchip()">-</button><input type="text" id="quantbelgchip" class="quant"><button onclick="incbelgchip()">+</button></p>
+                    </div>
+                </div>
+                <div class="kitkatd" id="kitkatdisp">
+                    <div class="centerd">
+                        <p>KitKat Milkshake(₹80) <button onclick="deckitkat()">-</button><input type="text" id="quantkitkat" class="quant"><button onclick="inckitkat()">+</button></p>
+                    </div>
+                </div>
+                <div class="vand" id="vandisp">
+                    <div class="centerd">
+                        <p>vanilla Milkshake(₹70) <button onclick="decvan()">-</button><input type="text" id="quantvan" class="quant"><button onclick="incvan()">+</button></p>
+                    </div>
+                </div>
+                <div class="freshlimed" id="freshlimedisp">
+                    <div class="centerd">
+                        <p>Fresh Lime(₹20) <button onclick="decfreshlime()">-</button><input type="text" id="quantfreshlime" class="quant"><button onclick="incfreshlime()">+</button></p>
+                    </div>
+                </div>
+                <div class="sodalimed" id="sodalimedisp">
+                    <div class="centerd">
+                        <p>Soda Lime(₹30) <button onclick="decsodalime()">-</button><input type="text" id="quantsodalime" class="quant"><button onclick="incsodalime()">+</button></p>
+                    </div>
+                </div>
+                <div class="mintlimed" id="mintlimedisp">
+                    <div class="centerd">
+                        <p>Mint Lime(₹35) <button onclick="decmintlime()">-</button><input type="text" id="quantmintlime" class="quant"><button onclick="incmintlime()">+</button></p>
+                    </div>
+                </div>
+                <div class="pineapplejd" id="pineapplejdisp">
+                    <div class="centerd">
+                        <p>Pineapple Juice(₹60) <button onclick="decpineapplej()">-</button><input type="text" id="quantpineapplej" class="quant"><button onclick="incpineapplej()">+</button></p>
+                    </div>
+                </div>
+                <div class="sweetlassid" id="sweetlassidisp">
+                    <div class="centerd">
+                        <p>Sweet Lassi(₹30) <button onclick="decsweetlassi()">-</button><input type="text" id="quantsweetlassi" class="quant"><button onclick="incsweetlassi()">+</button></p>
+                    </div>
+                </div>
+                <div class="mangod" id="mangodisp">
+                    <div class="centerd">
+                        <p>Mango Lassi(₹40) <button onclick="decmango()">-</button><input type="text" id="quantmango" class="quant"><button onclick="incmango()">+</button></p>
                     </div>
                 </div>
             </div>
