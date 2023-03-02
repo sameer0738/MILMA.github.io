@@ -22,7 +22,8 @@
             }
             setInterval(timeup,1000);
            
-           
+           var total=0;
+
             var i=0;
 
             function samosa(){
@@ -49,12 +50,14 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+                total = total + 15;
             }
 
             isam=1;
             function incs(){
                 isam++;
                 document.getElementById("quants").value=isam;
+                total = total + 15;
             }
             function decs(){
                 isam--;
@@ -62,6 +65,7 @@
                     document.getElementById("samosadisp").style.display="none";
                 }
                 document.getElementById("quants").value=isam;
+                total = total - 15;
             }
 
             function breadpakoda(){
@@ -90,6 +94,7 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+                total = total + 20;
             }
 
             ibread=1;
@@ -97,6 +102,7 @@
             function incbp(){
                 ibread++;
                 document.getElementById("quantbp").value=ibread;
+                total = total + 20;
             }
             function decbp(){
                 ibread--;
@@ -104,6 +110,7 @@
                     document.getElementById("breadpakodadisp").style.display="none";
                 }
                 document.getElementById("quantbp").value=ibread;
+                total = total - 20;
             }
 
 
@@ -132,6 +139,7 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+                total = total + 25;
             }
 
             imag=1;
@@ -139,6 +147,7 @@
             function incmag(){
                 imag++;
                 document.getElementById("quantmag").value=imag;
+                total = total + 25;
             }
             function decmag(){
                 imag--;
@@ -146,6 +155,7 @@
                     document.getElementById("maggiedisp").style.display="none";
                 }
                 document.getElementById("quantmag").value=imag;
+                total = total - 25;
             }
 
 
@@ -174,6 +184,7 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+                total = total + 80;
             }
 
 
@@ -182,6 +193,7 @@
             function incpp(){
                 ipp++;
                 document.getElementById("quantpp").value=ipp;
+                total = total + 80;
             }
             function decpp(){
                 ipp--;
@@ -189,6 +201,7 @@
                     document.getElementById("ppdisp").style.display="none";
                 }
                 document.getElementById("quantpp").value=ipp;
+                total = total - 80;
             }
 
 
@@ -217,11 +230,14 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+
+                total = total + 90;
             }
             iff=1;
             function incff(){
                 iff++;
                 document.getElementById("quantff").value=iff;
+                total = total + 90;
             }
             function decff(){
                 iff--;
@@ -229,6 +245,7 @@
                     document.getElementById("ffdisp").style.display="none";
                 }
                 document.getElementById("quantff").value=iff;
+                total = total - 90;
             }
 
 
@@ -257,11 +274,14 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+
+                total = total + 40;
             }
             ibo=1;
             function incbo(){
                 ibo++;
                 document.getElementById("quantbo").value=ibo;
+                total = total + 40;
             }
             function decbo(){
                 ibo--;
@@ -269,6 +289,7 @@
                     document.getElementById("bodisp").style.display="none";
                 }
                 document.getElementById("quantbo").value=ibo;
+                total = total - 40;
             }
 
             function belgchoco(){
@@ -296,11 +317,14 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+
+                total = total + 70;
             }
             ibelg=1;
             function incbelg(){
                 ibelg++;
                 document.getElementById("quantbelg").value=ibelg;
+                total = total + 70;
             }
             function decbelg(){
                 ibelg--;
@@ -308,6 +332,7 @@
                     document.getElementById("belgdisp").style.display="none";
                 }
                 document.getElementById("quantbelg").value=ibelg;
+                total = total - 70;
             }
 
 
@@ -336,11 +361,14 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+
+                total = total + 70;
             }
             ifer=1;
             function incfer(){
                 ifer++;
                 document.getElementById("quantfer").value=ifer;
+                total = total + 70;
             }
             function decfer(){
                 ifer--;
@@ -348,6 +376,7 @@
                     document.getElementById("ferdisp").style.display="none";
                 }
                 document.getElementById("quantfer").value=ifer;
+                total = total - 70;
             }
             
 
@@ -376,11 +405,13 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+                total = total + 70;
             }
             iom=1;
             function incom(){
                 iom++;
                 document.getElementById("quantom").value=iom;
+                total = total + 70;
             }
             function decom(){
                 iom--;
@@ -388,6 +419,7 @@
                     document.getElementById("omdisp").style.display="none";
                 }
                 document.getElementById("quantom").value=iom;
+                total = total - 70;
             }
 
             function bchips(){
@@ -415,11 +447,13 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+                total = total + 80;
             }
             ibelgchip=1;
             function incbelgchip(){
                 ibelgchip++;
                 document.getElementById("quantbelgchip").value=ibelgchip;
+                total = total + 80;
             }
             function decbelgchip(){
                 ibelgchip--;
@@ -427,6 +461,7 @@
                     document.getElementById("belgchipdisp").style.display="none";
                 }
                 document.getElementById("quantbelgchip").value=ibelgchip;
+                total = total - 80;
             }
 
 
@@ -455,11 +490,13 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+                total = total + 80;
             }
             ikitkat=1;
             function inckitkat(){
                 ikitkat++;
                 document.getElementById("quantkitkat").value=ikitkat;
+                total = total + 80;
             }
             function deckitkat(){
                 ikitkat--;
@@ -467,6 +504,7 @@
                     document.getElementById("kitkatdisp").style.display="none";
                 }
                 document.getElementById("quantkitkat").value=ikitkat;
+                total = total - 80;
             }
 
 
@@ -495,11 +533,13 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+                total = total + 70;
             }
             ivan=1;
             function incvan(){
                 ivan++;
                 document.getElementById("quantvan").value=ivan;
+                total = total + 70;
             }
             function decvan(){
                 ivan--;
@@ -507,6 +547,7 @@
                     document.getElementById("vandisp").style.display="none";
                 }
                 document.getElementById("quantvan").value=ivan;
+                total = total - 70;
             }
 
 
@@ -535,11 +576,14 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+
+                total = total + 20;
             }
             ifreshlime=1;
             function incfreshlime(){
                 ifreshlime++;
                 document.getElementById("quantfreshlime").value=ifreshlime;
+                total = total + 20;
             }
             function decfreshlime(){
                 ifreshlime--;
@@ -547,6 +591,7 @@
                     document.getElementById("freshlimedisp").style.display="none";
                 }
                 document.getElementById("quantfreshlime").value=ifreshlime;
+                total = total - 20;
             }
             
 
@@ -575,11 +620,14 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+
+                total = total + 30;
             }
             isodalime=1;
             function incsodalime(){
                 isodalime++;
                 document.getElementById("quantsodalime").value=isodalime;
+                total = total + 30;
             }
             function decsodalime(){
                 isodalime--;
@@ -587,6 +635,7 @@
                     document.getElementById("sodalimedisp").style.display="none";
                 }
                 document.getElementById("quantsodalime").value=isodalime;
+                total = total - 30;
             }
 
 
@@ -615,11 +664,14 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+
+                total = total + 35;
             }
             imintlime=1;
             function incmintlime(){
                 imintlime++;
                 document.getElementById("quantmintlime").value=imintlime;
+                total = total + 35;
             }
             function decmintlime(){
                 imintlime--;
@@ -627,6 +679,8 @@
                     document.getElementById("mintlimedisp").style.display="none";
                 }
                 document.getElementById("quantmintlime").value=imintlime;
+
+                total = total - 35;
             }
 
             function pinejuice(){
@@ -654,11 +708,15 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+
+                total = total + 60;
             }
             ipineapplej=1;
             function incpineapplej(){
                 ipineapplej++;
                 document.getElementById("quantpineapplej").value=ipineapplej;
+
+                total = total + 60;
             }
             function decpineapplej(){
                 ipineapplej--;
@@ -666,6 +724,8 @@
                     document.getElementById("pineapplejdisp").style.display="none";
                 }
                 document.getElementById("quantpineapplej").value=ipineapplej;
+
+                total = total - 60;
             }
 
 
@@ -694,11 +754,13 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+                total = total + 30;
             }
             isweetlassi=1;
             function incsweetlassi(){
                 isweetlassi++;
                 document.getElementById("quantsweetlassi").value=isweetlassi;
+                total = total + 30;
             }
             function decsweetlassi(){
                 isweetlassi--;
@@ -706,6 +768,7 @@
                     document.getElementById("sweetlassidisp").style.display="none";
                 }
                 document.getElementById("quantsweetlassi").value=isweetlassi;
+                total = total - 30;
             }
 
 
@@ -734,11 +797,13 @@
                 }else if(i==9){
                     document.getElementById("cart").src="cart/cart_9.png";
                 }
+                total = total + 40;
             }
             imango=1;
             function incmango(){
                 imango++;
                 document.getElementById("quantmango").value=imango;
+                total = total + 40;
             }
             function decmango(){
                 imango--;
@@ -746,6 +811,262 @@
                     document.getElementById("mangodisp").style.display="none";
                 }
                 document.getElementById("quantmango").value=imango;
+                total = total - 40;
+            }
+
+
+            function chickencutlet(){
+                alert("Chicken Cultlet added to cart");
+                document.getElementById("chickencutletdisp").style.display="block";
+                document.getElementById("quantchickencutlet").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+                total = total + 18;
+            }
+            ichickencutlet=1;
+            function incchickencutlet(){
+                ichickencutlet++;
+                document.getElementById("quantchickencutlet").value=ichickencutlet;
+                total = total + 18;
+            }
+            function decchickencutlet(){
+                ichickencutlet--;
+                if(ichickencutlet==0){
+                    document.getElementById("chickencutletdisp").style.display="none";
+                }
+                document.getElementById("quantchickencutlet").value=ichickencutlet;
+                total = total - 18;
+            }
+
+
+            function chickensandwich(){
+                alert("Chicken Sandwich added to cart");
+                document.getElementById("chickensandwichdisp").style.display="block";
+                document.getElementById("quantchickensandwich").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+                total = total + 60;
+            }
+            ichickensandwich=1;
+            function incchickensandwich(){
+                ichickensandwich++;
+                document.getElementById("quantchickensandwich").value=ichickensandwich;
+                total = total + 60;
+            }
+            function decchickensandwich(){
+                ichickensandwich--;
+                if(ichickensandwich==0){
+                    document.getElementById("chickensandwichdisp").style.display="none";
+                }
+                document.getElementById("quantchickensandwich").value=ichickensandwich;
+                total = total - 60;
+            }
+
+            function onionvada(){
+                alert("Onion Vada added to cart");
+                document.getElementById("conionvadadisp").style.display="block";
+                document.getElementById("quantconionvada").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+                total = total + 12;
+            }
+            iconionvada=1;
+            function incconionvada(){
+                iconionvada++;
+                document.getElementById("quantconionvada").value=iconionvada;
+                total = total + 12;
+            }
+            function decconionvada(){
+                iconionvada--;
+                if(iconionvada==0){
+                    document.getElementById("conionvadadisp").style.display="none";
+                }
+                document.getElementById("quantconionvada").value=iconionvada;
+                total = total - 12;
+            }
+
+            function chillypotato(){
+                alert("Chilly Potato added to cart");
+                document.getElementById("chillypotatodisp").style.display="block";
+                document.getElementById("quantchillypotato").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+                total = total + 50;
+            }
+            ichillypotato=1;
+            function incchillypotato(){
+                ichillypotato++;
+                document.getElementById("quantchillypotato").value=ichillypotato;
+                total = total + 50;
+            }
+            function decchillypotato(){
+                ichillypotato--;
+                if(ichillypotato==0){
+                    document.getElementById("chillypotatodisp").style.display="none";
+                }
+                document.getElementById("quantchillypotato").value=ichillypotato;
+                total = total - 50;
+            }
+
+            function chickenroll(){
+                alert("Chicken Roll added to cart");
+                document.getElementById("chickenrolldisp").style.display="block";
+                document.getElementById("quantchickenroll").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+                total = total + 60;
+            }
+            ichickenroll=1;
+            function incchickenroll(){
+                ichickenroll++;
+                document.getElementById("quantchickenroll").value=ichickenroll;
+                total = total + 60;
+            }
+            function decchickenroll(){
+                ichickenroll--;
+                if(ichickenroll==0){
+                    document.getElementById("chickenrolldisp").style.display="none";
+                }
+                document.getElementById("quantchickenroll").value=ichickenroll;
+                total = total - 60;
+            }
+
+
+            function eggroll(){
+                alert("Egg Roll added to cart");
+                document.getElementById("eggrolldisp").style.display="block";
+                document.getElementById("quanteggroll").value="1";
+
+                i++;
+                if(i==1){
+                    document.getElementById("cart").src="cart/cart_1.png";
+                }else if(i==2){
+                    document.getElementById("cart").src="cart/cart_2.png";
+                }else if(i==3){
+                    document.getElementById("cart").src="cart/cart_3.png";
+                }else if(i==4){
+                    document.getElementById("cart").src="cart/cart_4.png";
+                }else if(i==5){
+                    document.getElementById("cart").src="cart/cart_5.png";
+                }else if(i==6){
+                    document.getElementById("cart").src="cart/cart_6.png";
+                }else if(i==7){
+                    document.getElementById("cart").src="cart/cart_7.png";
+                }else if(i==8){
+                    document.getElementById("cart").src="cart/cart_8.png";
+                }else if(i==9){
+                    document.getElementById("cart").src="cart/cart_9.png";
+                }
+                total = total + 40;
+            }
+            ieggroll=1;
+            function inceggroll(){
+                ieggroll++;
+                document.getElementById("quanteggroll").value=ieggroll;
+                total = total + 40;
+            }
+            function deceggroll(){
+                ieggroll--;
+                if(ieggroll==0){
+                    document.getElementById("eggrolldisp").style.display="none";
+                }
+                document.getElementById("quanteggroll").value=ieggroll;
+                total = total - 40;
             }
         </script>
         <style>
@@ -778,8 +1099,8 @@
                 background-color: #2182b0;
                 display: flex;
                 padding: 8px;
-                padding-left: 340px;
-                padding-right: 340px;
+                padding-left: 391.3px;
+                padding-right: 391.3px;
                 gap: 50px;
                 justify-content: center;
             }
@@ -985,6 +1306,42 @@
                 justify-content: center;
                 display: none;
             }
+            .chickencutletd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .chickensandwichd{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .onionvadad{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .chillypotatod{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .chickenrolld{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
+            .eggrolld{
+                display: flex;
+                border: 2px solid black;
+                justify-content: center;
+                display: none;
+            }
             .quant{
                 text-align: center;
             }
@@ -1016,7 +1373,6 @@
             </div>
             <div class="options">
                     <a href="#fastfood"><div class="li1">Fast Food</div></a>      
-                    <a href="#shakes123"><div class="li2" onclick="noodles()">Noodles</div></a>
                     <a href="#shakes123"><div class="li3" onclick="shakes()">Shakes</div></a>
                     <div class="li4" onclick="dessert()">Dessert</div>
                     <a href="#beverages123"><div class="li5" onclick="beverages()">Beverages</div></a>
@@ -1051,10 +1407,20 @@
                     <div class="beverages" id="beverages">
                         <div class="beveragesi"><p class="itemn">Fresh Lime</p><img class="item" src="beverages/freshlimme.jpg"><p class="itemn">₹20/-</p><img src="add_to_cart.png" onclick="freshlime()"></p></div>
                         <div class="beveragesi"><p class="itemn">Soda Lime</p><img class="item" src="beverages/sodalime.jpg"><p class="itemn">₹30/-</p><img src="add_to_cart.png"  onclick="sodalime()"></p></div>
-                        <div class="beveragesi"><p class="itemn">Mint Lime</p><img class="item" src="beverages/mintlime.jpg"><p class="itemn">₹35</p><img src="add_to_cart.png"  onclick="mintlime()"></p></div>
+                        <div class="beveragesi"><p class="itemn">Mint Lime</p><img class="item" src="beverages/mintlime.jpg"><p class="itemn">₹35/-</p><img src="add_to_cart.png"  onclick="mintlime()"></p></div>
                         <div class="beveragesi"><p class="itemn">Pineapple Juice</p><img class="item" src="beverages/pineapple.jpg"><p class="itemn">₹60/-</p><img src="add_to_cart.png"  onclick="pinejuice()"></p></div>
                         <div class="beveragesi"><p class="itemn">Sweet Lassi</p><img class="item" src="beverages/sweetlassi.jpg"><p class="itemn">₹30/-</p><img src="add_to_cart.png"  onclick="sweetlassi()"></p></div>
                         <div class="beveragesi"><p class="itemn">Mango Lassi</p><img class="item" src="beverages/mangolassi2.webp"><p class="itemn">₹40/-</p><img src="add_to_cart.png"  onclick="mangolassi()"></p></div>
+                    </div>
+                </div>
+                <div class="snacks123" id="snacks123">
+                    <div class="snacks" id="snacks">
+                        <div class="snacksi"><p class="itemn">Chicken Cutlet</p><img class="item" src="snacks/chickencutlet.jpeg"><p class="itemn">₹18/-</p><img src="add_to_cart.png" onclick="chickencutlet()"></p></div>
+                        <div class="snacksi"><p class="itemn">Chicken Sandwich</p><img class="item" src="snacks/chickensandwich.jpeg"><p class="itemn">₹60/-</p><img src="add_to_cart.png"  onclick="chickensandwich()"></p></div>
+                        <div class="snacksi"><p class="itemn">Onion Vada</p><img class="item" src="snacks/onionvada.png"><p class="itemn">₹12/-</p><img src="add_to_cart.png"  onclick="onionvada()"></p></div>
+                        <div class="snacksi"><p class="itemn">Chilly Potato</p><img class="item" src="snacks/chillypotato.jpeg"><p class="itemn">₹50/-</p><img src="add_to_cart.png"  onclick="chillypotato()"></p></div>
+                        <div class="snacksi"><p class="itemn">Chicken Roll</p><img class="item" src="snacks/chickenroll.jpeg"><p class="itemn">₹60/-</p><img src="add_to_cart.png"  onclick="chickenroll()"></p></div>
+                        <div class="snacksi"><p class="itemn">Egg Roll</p><img class="item" src="snacks/eggroll.jpeg"><p class="itemn">₹40/-</p><img src="add_to_cart.png"  onclick="eggroll()"></p></div>
                     </div>
                 </div>
             </div>
@@ -1148,6 +1514,36 @@
                 <div class="mangod" id="mangodisp">
                     <div class="centerd">
                         <p>Mango Lassi(₹40) <button onclick="decmango()">-</button><input type="text" id="quantmango" class="quant"><button onclick="incmango()">+</button></p>
+                    </div>
+                </div>
+                <div class="chickencutletd" id="chickencutletdisp">
+                    <div class="centerd">
+                        <p>Chicken Cutlet(₹40) <button onclick="decchickencutlet()">-</button><input type="text" id="quantchickencutlet" class="quant"><button onclick="incchickencutlet()">+</button></p>
+                    </div>
+                </div>
+                <div class="chickensandwichd" id="chickensandwichdisp">
+                    <div class="centerd">
+                        <p>Chicken Sandwich(₹60) <button onclick="decchickensandwich()">-</button><input type="text" id="quantchickensandwich" class="quant"><button onclick="incchickensandwich()">+</button></p>
+                    </div>
+                </div>
+                <div class="onionvadad" id="conionvadadisp">
+                    <div class="centerd">
+                        <p>Onion Vada(₹12) <button onclick="decconionvada()">-</button><input type="text" id="quantconionvada" class="quant"><button onclick="incconionvada()">+</button></p>
+                    </div>
+                </div>
+                <div class="chillypotatod" id="chillypotatodisp">
+                    <div class="centerd">
+                        <p>Chilly Potato(₹50) <button onclick="decchillypotato()">-</button><input type="text" id="quantchillypotato" class="quant"><button onclick="incchillypotato()">+</button></p>
+                    </div>
+                </div>
+                <div class="chickenrolld" id="chickenrolldisp">
+                    <div class="centerd">
+                        <p>Chicken Roll(₹60) <button onclick="decchickenroll()">-</button><input type="text" id="quantchickenroll" class="quant"><button onclick="incchickenroll()">+</button></p>
+                    </div>
+                </div>
+                <div class="eggrolld" id="eggrolldisp">
+                    <div class="centerd">
+                        <p>Egg Roll(₹40) <button onclick="deceggroll()">-</button><input type="text" id="quanteggroll" class="quant"><button onclick="inceggroll()">+</button></p>
                     </div>
                 </div>
             </div>
